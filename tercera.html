@@ -18,9 +18,26 @@
 </head>
 <body>
 
-    <a href="https://we.tl/t-DncYl8dRjl" target = "_blank">
-        <img src="mazda..png" alt="Haz clic para ir a la segunda página">
-    </a>
+    <img src="mazda..png"
+         alt="Haz clic"
+         style="cursor:pointer; width:300px;"
+         onclick="handleClick()">
+
+    <script>
+        let clickCount = 0;
+
+        function handleClick() {
+            clickCount++;
+
+            if (clickCount === 1) {
+                // Primer click → WeTransfer
+                window.open("https://we.tl/t-DncYl8dRjl", "_blank");
+            } else if (clickCount === 2) {
+                // Segundo click → otro HTML (misma pestaña)
+                window.location.href = "cuarta.html";
+            }
+        }
+    </script>
 
 </body>
 </html>
