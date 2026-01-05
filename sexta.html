@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página principal</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        img {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <img src="peste.png"
+         alt="Haz clic"
+         style="cursor:pointer; width:600px; height:600px;"
+         onclick="handleClick()">
+
+    <script>
+        let clickCount = 0;
+
+        function handleClick() {
+            clickCount++;
+
+            if (clickCount === 1) {
+                // Primer click → WeTransfer
+                window.open("https://maps.app.goo.gl/kefzetPNwyUkKqY49?g_st=ipc", "_blank");
+            } else if (clickCount === 2) {
+                // Segundo click → otro HTML (misma pestaña)
+                window.location.href = "quinta.html";
+            }
+        }
+    </script>
+</body>
+</html>
