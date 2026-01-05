@@ -26,11 +26,17 @@
         let clickCount = 0;
 
         function handleClick() {
-            window.location.href = "quinta.html";
-            window.open("https://maps.app.goo.gl/kefzetPNwyUkKqY49?g_st=ipc", "_blank");
+            clickCount++;
+
+            if (clickCount === 1) {
+                // Primer click → WeTransfer
+                window.open("https://maps.app.goo.gl/kefzetPNwyUkKqY49?g_st=ipc", "_blank");
+            } else if (clickCount === 2) {
+                // Segundo click → otro HTML (misma pestaña)
+                window.location.href = "quinta.html";
+            }
         }
     </script>
 </body>
-
 </html>
 
