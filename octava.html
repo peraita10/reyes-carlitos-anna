@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página principal</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        img {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <img src="miata-surfero.png"
+         alt="Haz clic"
+         onclick="handleClick()">
+
+    <script>
+        let clickCount = 0;
+
+        function handleClick() {
+                window.location.href = "novena.html";
+        }
+    </script>
+</body>
+</html>
